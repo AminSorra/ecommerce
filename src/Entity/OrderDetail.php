@@ -22,7 +22,7 @@ class OrderDetail
     #[ORM\Id]
     #[ORM\ManyToOne(inversedBy: 'orderDetails')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?product $product = null;
+    private ?Product $Product = null;
 
 
     public function getQuantity(): ?int
@@ -61,14 +61,14 @@ class OrderDetail
         return $this;
     }
 
-    public function getProduct(): ?product
+    public function getProduct(): ?Product
     {
-        return $this->product;
+        return $this->Product;
     }
 
-    public function setProduct(?product $product): self
+    public function setProduct(?Product $Product): self
     {
-        $this->product = $product;
+        $this->Product = $Product;
 
         return $this;
     }

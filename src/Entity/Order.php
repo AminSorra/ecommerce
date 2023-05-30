@@ -23,7 +23,7 @@ class Order
     private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'orders')]
-    private ?coupon $coupon = null;
+    private ?Coupon $Coupon = null;
 
     #[ORM\ManyToOne(inversedBy: 'orders')]
     #[ORM\JoinColumn(nullable: false)]
@@ -66,14 +66,14 @@ class Order
         return $this;
     }
 
-    public function getCoupon(): ?coupon
+    public function getCoupon(): ?Coupon
     {
-        return $this->coupon;
+        return $this->Coupon;
     }
 
-    public function setCoupon(?coupon $coupon): self
+    public function setCoupon(?Coupon $Coupon): self
     {
-        $this->coupon = $coupon;
+        $this->Coupon = $Coupon;
 
         return $this;
     }

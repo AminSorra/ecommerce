@@ -18,7 +18,7 @@ class Image
 
     #[ORM\ManyToOne(inversedBy: 'images')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?product $product = null;
+    private ?Product $Product = null;
 
     public function getId(): ?int
     {
@@ -37,14 +37,14 @@ class Image
         return $this;
     }
 
-    public function getProduct(): ?product
+    public function getProduct(): ?Product
     {
-        return $this->product;
+        return $this->Product;
     }
 
-    public function setProduct(?product $product): self
+    public function setProduct(?Product $Product): self
     {
-        $this->product = $product;
+        $this->Product = $Product;
 
         return $this;
     }
